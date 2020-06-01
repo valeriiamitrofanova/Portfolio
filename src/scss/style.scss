@@ -1,0 +1,591 @@
+$cBlue: #4647f6;
+$cPurple: #c900ff;
+$cOrange: #ff6e16;
+$cGray: #5d5d5e;
+$cLightGray: #f8f9fa;
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+// Reusable
+
+button {
+  font-family: Montserrat;
+  height: 40px;
+  color: white;
+  font-size: 130%;
+  border-radius: 11px;
+  background: $cBlue;
+  border: transparent;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-image: linear-gradient(
+      90deg,
+      $cBlue 0%,
+      $cPurple 34%,
+      $cOrange 66%,
+      $cBlue 100%
+    );
+    animation: slidebg 8s linear infinite;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: (white !important);
+  width: auto;
+  font-weight: 300;
+  color: $cGray;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+  background-image: url(/dist/img/1page/flyinggirl.jpg);
+}
+
+//NAVIGATION
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: $cLightGray;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  list-style-type: none;
+  margin-right: 5.5rem;
+  padding-top: 12px;
+}
+
+.nav-links {
+  font-size: 17px;
+  color: $cGray;
+  transition: 0.3s;
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    color: $cBlue;
+    text-decoration: none;
+    transition: 0.3s;
+    padding-bottom: 3px;
+    &:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: $cBlue;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+}
+///LOGO
+.logo {
+  height: 45px;
+  width: auto;
+  padding: 4px;
+  margin-left: 5.5rem;
+  transition: 0.3s;
+  &:hover {
+    transform: rotate(25deg);
+  }
+}
+
+//BURGER
+.burger {
+  display: none;
+  div {
+    width: 35px;
+    height: 4px;
+    background-color: $cBlue;
+    margin: 5px 20px 5px 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+//HEADER
+.header-text {
+  display: inline-block;
+  margin-left: 5.5rem;
+  h1 {
+    margin-top: 9rem;
+    font-size: 64px;
+    color: $cBlue;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    font-size: 24px;
+  }
+  .no {
+    text-decoration: line-through;
+  }
+}
+
+//ABOUT ME
+.my-container {
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  max-width: 89%;
+  background-color: $cBlue;
+  box-shadow: 5px 10px 18px #5d5d5e6c;
+  border-radius: 25px;
+  h1 {
+    margin-top: 5%;
+    padding-top: 25px;
+    color: white;
+    font-size: 62px;
+    text-align: center;
+  }
+  p {
+    padding: 2% 4%;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+.content-container {
+  display: inline-block;
+  background-color: white;
+  border-radius: 13px;
+  margin: 0 50px 50px 50px;
+  box-shadow: 10px 9px 18px 3px #1f188080;
+  h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 30px;
+    color: $cBlue;
+  }
+}
+.text-and-img {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  p {
+    text-align: left;
+    color: $cGray;
+    padding-top: 65px;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  img {
+    margin-bottom: 30px;
+  }
+}
+.webdev {
+  height: 300px;
+  width: auto;
+  padding-left: 69px;
+}
+.design {
+  height: 310px;
+  width: auto;
+  padding-left: 40px;
+}
+.marketing {
+  height: 330px;
+  width: auto;
+  padding-left: 70px;
+}
+
+//Projects
+.my-container2 {
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 3%;
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 55px;
+    color: $cBlue;
+  }
+}
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 62.5%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.carousel_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel_track-container {
+  text-align: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.carousel_track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+.carousel_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.caption {
+  width: 33%;
+  position: absolute;
+  top: 85%;
+  left: 35%;
+  box-shadow: 10px 9px 18px 3px #1f188080;
+}
+.carousel_btn {
+  position: absolute;
+  width: 6%;
+  top: 50%;
+  outline: none;
+  box-shadow: 10px 9px 18px 3px #1f188080;
+}
+.btn-left {
+  left: -5%;
+}
+.btn-right {
+  right: -5%;
+}
+.carousel-nav {
+  text-align: center;
+  padding-top: 10px;
+}
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+}
+.carousel-indicator.current {
+  background: $cBlue;
+}
+.hidden {
+  display: none;
+}
+
+//CONTACT FORM
+.my-container3 {
+  height: 100vh;
+  width: 60%;
+  margin: 0 auto;
+  padding: 12% 0 5% 0;
+}
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 5px 10px 18px #5d5d5e3b;
+  border-radius: 25px;
+  height: auto;
+}
+.contact-img {
+  background: url("/dist/img/4page/form-v2.jpg") no-repeat center;
+  background-size: cover;
+  height: 620px;
+  border-radius: 25px 0 0 25px;
+}
+
+.contact-form {
+  h1 {
+    color: $cBlue;
+    margin-top: 18px;
+    font-size: 62px;
+  }
+  form {
+    margin: 40px;
+    .form-control {
+      font-family: Montserrat;
+      width: 100%;
+      margin-bottom: 20px;
+      outline-color: transparent;
+      outline-style: none;
+      border: none;
+      box-shadow: 2px 2px 10px 2px #5d5d5e1a;
+      border-radius: 10px;
+      padding: 15px 0 10px 10px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+}
+button {
+  width: 100%;
+  outline: none;
+}
+
+//FOOTER
+footer {
+  height: 15vh;
+  width: auto;
+  text-align: center;
+  div {
+    padding-top: 1rem;
+    display: inline-block;
+
+    ul {
+      margin-bottom: 24px;
+      li {
+        padding-left: 2rem;
+        display: inline-block;
+        i {
+          font-size: 25px;
+          &:hover {
+            color: $cBlue;
+          }
+        }
+      }
+    }
+  }
+}
+.fab {
+  color: $cGray;
+}
+
+// RESPONSIVE
+@media screen and (max-width: 1206px) {
+  ////////////////////////////// About Me
+  .text-and-img {
+    .big {
+      padding-top: 45px;
+    }
+  }
+  //////////////////////////////Portfolio
+  .carousel_btn {
+    width: 10%;
+  }
+  .btn-left {
+    left: 5%;
+  }
+  .btn-right {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ////////////////////////////// Navigation
+  .nav-bar {
+    width: 50%;
+  }
+  //////////////////////////////About Me
+
+  .header-text {
+    margin-left: 4rem;
+  }
+}
+
+@media screen and (max-width: 958px) {
+  //////////////////////////////ABOUT ME
+  .text-and-img {
+    display: block;
+    text-align: center;
+    p {
+      padding-top: 5px;
+      text-align: center;
+    }
+    .big {
+      padding-top: 10px;
+    }
+  }
+  .webdev,
+  .design,
+  .marketing {
+    padding-left: 0;
+    height: 250px;
+  }
+  .marketing {
+    height: 270px;
+  }
+  // ///////////////////////////Portfolio
+  .carousel {
+    height: 600px;
+    width: 100%;
+  }
+  //////////////////////////////CONTACT
+  .my-container3 {
+    width: 90vh;
+    height: auto;
+  }
+  .contact {
+    display: block;
+    text-align: center;
+    .contact-img {
+      background: url("/dist/img/4page/form-v3.jpg") no-repeat center;
+      height: 151px;
+      border-radius: 25px 25px 0 0;
+    }
+  }
+  button {
+    margin-bottom: 20px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  //////////////////////////////Nav
+  .nav-bar {
+    position: absolute;
+    right: 0px;
+    height: 30vh;
+    margin-right: 0;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    top: 8vh;
+    background-color: $cLightGray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translate(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  //////////////////////////////BURGER FOLDER
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  //////////////////////////////Header
+  header {
+    background-image: url(/dist/img/1page/girlmobile.jpg);
+  }
+  .header-text {
+    margin-left: 2rem;
+    h1 {
+      margin-top: 8rem;
+      font-size: 40px;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 17px;
+    }
+  }
+  .logo {
+    height: 30px;
+    margin-left: 2.5rem;
+    &:hover {
+      transform: rotate(0deg);
+    }
+  }
+  // ////////////////////About Me
+  .my-container {
+    max-width: 100%;
+    border-radius: 25px;
+    h1 {
+      margin-top: 0px;
+      font-size: 40px;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+
+  .content-container {
+    margin: 0 15px 50px 15px;
+    h2 {
+      font-size: 25px;
+    }
+  }
+  ///////////////////////////Projects
+  .my-container2 {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  ///////////////////////////Contact Form
+  .my-container3 {
+    width: 60vh;
+    height: auto;
+  }
+  .contact-form {
+    h1 {
+      font-size: 40px;
+    }
+  }
+  //////////////////////////////Footer
+  footer {
+    div {
+      ul {
+        margin-bottom: 10px;
+        li {
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+  .fab {
+    font-size: 17px;
+  }
+  // buttons
+  button {
+    font-size: 17px;
+    &:hover {
+      background-image: linear-gradient(90deg, $cBlue 0%, $cBlue 100%);
+      animation: slidebg 8s linear infinite;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  ////////////////////////////About Me
+  .content-container {
+    margin: 0 10px 30px 10px;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "homepage": "https://valeriiamitrofanova.github.io/ResumeWebsite",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Resume",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "css-loader": "^3.4.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-util": "^3.0.8",
+    "sass": "^1.26.5"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "./node_modules/.bin/webpack --mode development",
+    "prod": "./node_modules/.bin/webpack --mode production",
+    "gulp": "./node_modules/.bin/gulp",
+    "webpack": "./node_modules/.bin/webpack"
+  },
+  "keywords": [
+    "resume",
+    "cv"
+  ],
+  "author": "Valeriia Mitrofanova",
+  "license": "ISC"
+}
